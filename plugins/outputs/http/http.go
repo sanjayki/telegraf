@@ -203,7 +203,7 @@ func (h *HTTP) write(reqBody []byte) error {
 	defer resp.Body.Close()
 	_, err = ioutil.ReadAll(resp.Body)
 
-	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+	if resp.StatusCode < 200 || resp.StatusCode >= 303 {
 		return fmt.Errorf("when writing to [%s] received status code: %d", h.URL, resp.StatusCode)
 	}
 
