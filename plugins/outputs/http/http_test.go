@@ -144,26 +144,6 @@ func TestStatusCode(t *testing.T) {
 				require.Error(t, err)
 			},
 		},
-/*		{
-			name: "3xx status is an error",
-			plugin: &HTTP{
-				URL: u.String(),
-			},
-			statusCode: http.StatusMultipleChoices,
-			errFunc: func(t *testing.T, err error) {
-				require.Error(t, err)
-			},
-		},
-		{
-			name: "4xx status is an error",
-			plugin: &HTTP{
-				URL: u.String(),
-			},
-			statusCode: http.StatusMultipleChoices,
-			errFunc: func(t *testing.T, err error) {
-				require.Error(t, err)
-			},
-		}, */
 	}
 
 	for _, tt := range tests {
