@@ -203,7 +203,7 @@ func (h *HTTP) write(reqBody []byte) error {
 	defer resp.Body.Close()
 	_, err = ioutil.ReadAll(resp.Body)
 	
-	fmt.Printf("Redirect url is: %s", resp.Location())
+	fmt.Printf("Redirect url is: %s", resp.Location().String())
 	fmt.Printf("Redirect url is: %s", resp.Status)
 
 	if resp.StatusCode < 200 || resp.StatusCode >= 303 {
